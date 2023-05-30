@@ -1,0 +1,88 @@
+body{
+    background:#000000;
+    color:#fff
+}
+
+.marketprice_us{
+    background-color:#8f5bf0;
+    padding: 150px 0px;
+}
+
+.marketprice_inner{
+    background-color: #a7ea33;
+    position: relative;
+    box-shadow: 20px 22px 44px #cccc;
+    border-radius: 25px;
+}
+.marketprice_field{
+    padding: 60px 340px 90px 100px;
+}
+
+
+.marketprice_field h3{
+    color: #000;
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 10px
+}
+.marketprice_field p{
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 35px;
+}
+.marketprice_field .form-control{
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.marketprice_field .form-control:focus{
+    box-shadow: none;
+    outline: none;
+    border-bottom: 2px solid #1325e8;
+}
+.marketprice_field .form-control::placeholder{
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.marketprice_info_sec {
+    position: absolute;
+    background-color: #1368ec;
+    right: 1px;
+    top: 18%;
+    height: 340px;
+    width: 340px;
+    padding: 40px;
+    border-radius: 25px 0 0 25px;
+}
+.marketprice_info_sec h4{
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+}
+
+.info_single{
+    margin: 30px 0px;
+}
+.info_single i{
+    margin-right: 15px;
+}
+.info_single span{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+button.marketprice_form_submit {
+    background: #E41B4D;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 25px;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
