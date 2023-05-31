@@ -1,4 +1,4 @@
-let tickerList = [];
+let tickerListShare = [];
 
 const ticker = document.getElementById("ticker-symbol");
 const getBtn = document.getElementById("button");
@@ -15,11 +15,26 @@ async function currentPrice() {
     const response = await fetch(tickerUrl);
     const data = await response.json();
 
-    tickerList = data.values;
+    tickerListShare = data.values;
     // console.log(tickerList);
 
-    dataUi.innerText = tickerList.map((item) => item.low)[0];
-
+    const dateTime = tickerListShare.map((item) => item.datetime)[0];
+    const openPrice = tickerListShare.map((item) => item.open)[0];
+    const highPrice = tickerListShare.map((item) => item.high)[0];
+    const lowPrice = tickerListShare.map((item) => item.low)[0];
+    const closePrice = tickerListShare.map((item) => item.close)[0];
+    const volumeTraded = tickerListShare.map((item) => item.volume)[0];
+    dataUi.innerHTML = `
+    <div style="overflow-y: auto; color:white">
+    <h5 style ="text-decoration: underline;">Market Price of:${tickerUsrInput}</h5>
+    <p>Date & Time :${dateTime}</p>
+    <p>Open-Price :${openPrice}</p>
+    <p>High-Price :${highPrice}</p>
+    <p>Low-Price:${lowPrice}</p>
+    <p>Closed-Price:${closePrice}</p>
+    <p>Volume-Traded:${volumeTraded}</p>
+    </div>
+    `;
     //  console.log(tickerList.map((item) => item));
   } catch (e) {
     console.log(e);
